@@ -116,8 +116,8 @@ class Main(QMainWindow):
         self.currently = self.audio[row]
         if self.currently:
             self.statusBar().showMessage(f'Выбрана аудиозапись: '
-                                          '{self.currently["artist"]}'
-                                          ' — {self.currently["title"]}')
+                                          f'{self.currently["artist"]}'
+                                          f' — {self.currently["title"]}')
         else:
             self.statusBar().showMessage('Аудиозапись не выбрана')
 
