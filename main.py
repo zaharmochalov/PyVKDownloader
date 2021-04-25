@@ -36,6 +36,7 @@ class Auth(QMainWindow):
         self.password.resize(210, 30)
         self.password.move(35, 160)
         self.password.setPlaceholderText('Пароль')
+        self.password.setEchoMode(QLineEdit.Password)
         # labels
         self.label1 = QLabel(self)
         self.label1.setText('Авторизуйтесь ВКонтакте, чтобы продолжить.')
@@ -162,7 +163,7 @@ class Main(QMainWindow):
                 error.setIconPixmap(pixmap)
                 error.setText('<html><b style="font-size: 13px;">'
                               'Ошибка при сохранении файла!</b</html>')
-            ok.exec_()
+                error.exec_()
             ok = QMessageBox()
             ok.setWindowIcon(QIcon('icons/ok.png'))
             ok.setWindowTitle(' ')
