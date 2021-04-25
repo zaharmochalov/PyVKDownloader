@@ -74,6 +74,7 @@ class Auth(QMainWindow):
             self.vk = self.vk_session.get_api()
             self.user_id = self.vk.users.get()[0]['id']
             self.vk_audio = audio.VkAudio(self.vk_session)
+            self.hide()
             self.main1 = Main(self.vk_session, self.user_id, self.vk_audio)
             self.main1.show()
         except Exception as e:
